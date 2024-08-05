@@ -1,41 +1,61 @@
 html,body {
   height: 100%;
-  width: 100%;
-  padding: 5px;}
-  
+  background-color: rgb(181, 224, 116);
+}
 
-
-
-
-
-
-
-
-
-
-.font-family {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 300;
+.fontSize {
   font-size: 20px;
+}
+
+.borderEntry {
+  border: 1px solid rgb(2, 31, 2);
+  font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("/img/entryImg.png");
+
+  /* Add the blur effect */
+  filter: blur(8px);
+
+  /* Full height */
+  height: 480px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-text {
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
 }
 
 /* Style the buttons */
 .btn2 {
-  border: 1px ;
-  border-color: blue ;
-  border-style: solid;
+  border: 1px solid rgb(2, 31, 2);
   outline: none;
   padding: 10px 16px;
   background-color: #f1f1f1;
+  color: black;
+  font-weight: bold;
   cursor: pointer;
 }
 
 /* Style the active class (and buttons on mouse-over) */
 .active, .btn2:hover {
-  background-color: #666;
+  background-color: rgb(74, 208, 226);
   color: white;
-}
-
-.btn3 {
-  margin: auto;
 }

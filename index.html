@@ -11,64 +11,69 @@
 </head>
 
 <body>
+  <br><br>
+  <div class="container">
+    <div class="bg-image"></div>
+    <div class="bg-text">
+      <br><br>
+      <h1 class="text-center col-12 mt-1">Plant Management</h1>
 
-  <div class="container mt-5 bg-img">
+      <div class="mb-1 fontSize d-flex justify-content-center">
+        <div id="plantForm" class="row justify-content-center">
 
-    <h1 class="text-center col-12 mb-4">Plant Management</h1>
+          <div class="form-group col-md-6 mt-1">
+            <label for="name">Name</label>
+            <input type="text" class="form-control fontSize borderEntry mt-1" id="name" placeholder="Enter plant name">
+          </div>
 
-    <div class="mb-3">
-      <div id="plantForm" class="row">
+          <div class="form-group col-md-6 mt-1">
+            <label for="petSafe">Safe for Pets?</label>
+            <select class="form-control fontSize borderEntry mt-1" id="petSafe">
+              <!-- <option value="">Is it safe for Pets?</option> -->
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
 
-        <div class="form-group col-md-6 mt-2">
-          <label for="name">Name</label>
-          <input type="text" class="form-control mt-2" id="name" placeholder="Enter plant name">
-        </div>
+          <div class="form-group col-md-6 mt-1">
+            <label for="price">Price Affordability</label>
+            <select class="form-control fontSize borderEntry mt-1" id="price" name="price">
+              <!-- <option value="">Select affordability level</option> -->
+              <option value="low">Low Range</option>
+              <option value="mid">Low-Mid Range</option>
+              <option value="mid">Mid Range</option>
+              <option value="mid">Mid-High Range</option>
+              <option value="high">High Range</option>
+            </select>
+          </div>
 
-        <div class="form-group col-md-6 mt-2">
-          <label for="petSafe">Safe for Pets?</label>
-          <select class="form-control mt-2" id="petSafe">
-            <!-- <option value="">Is it safe for Pets?</option> -->
-            <option value="Yes">Yes</option>
-          <option value="No">No</option>
-          </select>
-        </div>
+          <div class="form-group col-md-6">
+            <div class="mt-1"> <label for="careLevel">Care Level (Low [1] to High [5])</label></div>
+            <div id="careLevel" class="btn-group mt-1 d-flex align-items-center" role="group">
+              <button type="button" class="btn btn2 btn-outline-primary" value="1">1</button>
+              <button type="button" class="btn btn2 btn-outline-primary active" value="2">2</button>
+              <button type="button" class="btn btn2 btn-outline-primary" value="3">3</button>
+              <button type="button" class="btn btn2 btn-outline-primary" value="4">4</button>
+              <button type="button" class="btn btn2 btn-outline-primary" value="5">5</button>
+            </div>
 
-        <div class="form-group col-md-6 mt-2">
-          <label for="price">Price Affordability</label>
-          <select class="form-control mt-2" id="price" name="price">
-            <!-- <option value="">Select affordability level</option> -->
-            <option value="low">Low Range</option>
-            <option value="mid">Low-Mid Range</option>
-            <option value="mid">Mid Range</option>
-            <option value="mid">Mid-High Range</option>
-            <option value="high">High Range</option>
-          </select>
-        </div>
+          </div>
+          <div class="d-flex justify-content-center mt-3">
 
-        <div class="form-group col-md-6 mt-3">
-          <label for="careLevel">Care Level [Low(1) to High(5)]</label>
-          <div id="careLevel" class="btn-group mx-2" role="group">
-            <button type="button" class="btn btn2 btn-outline-primary" value="1">1</button>
-            <button type="button" class="btn btn2 btn-outline-primary active" value="2">2</button>
-            <button type="button" class="btn btn2 btn-outline-primary" value="3">3</button>
-            <button type="button" class="btn btn2 btn-outline-primary" value="4">4</button>
-            <button type="button" class="btn btn2 btn-outline-primary" value="5">5</button>
+            <input type="submit" id="addPlant" class="btn btn-md btn-primary fontSize"
+              style="margin-right: 3px;font-weight: bold;" value="Add New Plant" />
+
+            <input type="submit" id="SaveBtn" class="btn btn-md btn-primary fontSize"
+              style="margin-left: 3px; font-weight: bold;" value="Save" />
+
           </div>
         </div>
-
-        <input type="submit" id="addPlant" class="btn btn3 btn-md btn-primary col-2 mt-4"
-          value="Add New Plant" />
-        <input type="submit" id="SaveBtn" class="btn btn3 btn-md btn-primary col-2 mt-4"
-          value="Save" />
-
       </div>
+    </div>
+    <h2 class="mt-4 mb-4 text-center" style="font-weight: bold;">Indoor Plants List</h2>
 
-      <h2 class="mt-4 mb-4 text-center">Indoor Plants List</h2>
-
-      <div id="plantList" class="list-group">
-        <!-- Plant items will be appended here -->
-      </div>
-
+    <div id="plantList" class="list-group">
+      <!-- Plant items will be appended here -->
     </div>
 
     <!-- axios -->
@@ -76,7 +81,7 @@
       integrity="sha512-vHNHepeQWwAggJlhEk932jRS5sNdn/Nn4F+w4TpXW5dA+04qnd3e7YpfXo6auWhFG6z3FVhmScG4ovtF+qYeZw=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- data.js and script.js -->
-    <script src="data.js"></script>
+
     <script src="script.js"></script>
 </body>
 
